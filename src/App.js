@@ -1,5 +1,15 @@
 
 import './assets/App.css';
+// 廣告區圖片
+import adImage from './homePagePicture/AD/廣告區圖片.png';
+
+// 安心窩APP圖示
+import anxinwoLogo from './homePagePicture/new/anxinwo_app.png';
+// GOOLE PLAY下載圖示
+import googlePlayDownload from './homePagePicture/new/google_play_download.png';
+// APPLE STORE下載圖示
+import appleStoreDownload from './homePagePicture/new/apple_store_download.png';
+
 
 const iconContainerStyle = {
   // 強制固定寬高
@@ -46,15 +56,18 @@ const Nav=()=>{
     <>
       <nav className="navbar navbar-light bg-light" style={{position:"fixed" ,width:"100%",height:"8%",zIndex:"10",top:"0",right:"0"}} >
         <div className="container-fluid">
-          <span className="navbar-brand ms-5">安心窩</span>
+          
+          <span className="navbar-brand ms-5">
+            <i className="bi bi-house-heart"></i> 安心窩
+          </span>
           <form className="d-flex">
             <button className="btn btn-outline-success top-button" type="submit">
               Search
             </button>
-            <button class="navbar-toggler custom-toggler ms-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="toggler-bar"></span>
-              <span class="toggler-bar"></span>
-              <span class="toggler-bar"></span>
+            <button className="navbar-toggler custom-toggler ms-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span className="toggler-bar"></span>
+              <span className="toggler-bar"></span>
+              <span className="toggler-bar"></span>
             </button>
           </form>
         </div>
@@ -82,9 +95,9 @@ const ImgBar=()=>{
               <div className="carousel-item active " style={{width:"1840px",height: '720px'}}>
                 {/* 背景圖片：使用 object-fit 確保填滿 */}
                 <img 
-                  src="" 
+                  src={adImage}
                   className="carousel-img d-block w-100 h-100" 
-                  style={{ objectFit: 'cover' }} 
+                  style={{ objectFit: 'cover',zIndex:"-1" }} 
                   alt="安心找到好房東"/>
                   {/* 2. 文字與按鈕遮罩層 */}
                   <div className="carousel-caption h-100 position-absolute" style={{left: "10%", textAlign: "left", top:"50%"}}>
@@ -101,7 +114,7 @@ const ImgBar=()=>{
             </div>
             {/* 左右控制按鈕 (可選) */}
             <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
             </button>
             <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
@@ -304,7 +317,7 @@ function App() {
 
         {/*主題找屋*/}
         {/* 1. 將外層 container 改為 container-fluid 以達到 100% 寬度 */}
-        <div className="container-fluid my-5 bg-customer border border-dark mt-5 px-0" style={{width:"100%",minHeight: "100%" }}>
+        <div className="container-fluid my-5 bg-customer mt-5 px-0" style={{width:"100%",minHeight: "100%" }}>
           
           <div
             id="select2" 
@@ -391,7 +404,7 @@ function App() {
 
         {/*公告&安心窩app演示*/}
         <div className="container-fluid mt-5 news-app-section py-5" 
-          style={{width:"100%",height:"100%",borderRadius:"10px"}}>
+          style={{width:"100%",height:"100%"}}>
           <div className="custom-container p-4 p-md-5">
             <div className="row g-4 position-relative">
 
@@ -412,27 +425,61 @@ function App() {
                     </li>
                   </ul>
                   <div className="text-end mt-auto">
-                    <a href="#" className="text-decoration-none text-secondary">更多內容 →</a>
+                    <p className="text-decoration-none text-secondary">更多內容 →</p>
                   </div>
                 </div>
               </div>
 
-              {/* 右側：APP 下載 */}
+             {/* 右側：APP 下載 */}
               <div className="col-md-6">
-                <div className="info-card h-100 p-4 shadow-sm d-flex flex-column justify-content-between">
-                  <div>
+                {/* 1. 確保卡片有 position-relative 且 overflow-hidden */}
+                <div className="info-card h-100 p-4 shadow-sm d-flex flex-column position-relative overflow-hidden">
+                  
+                  {/* 2. 背景圖片：移到最上方，使用絕對定位 */}
+                  <img 
+                    src={anxinwoLogo} 
+                    alt="background"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      zIndex: 0,
+                      // --- 新增以下遮罩樣式 ---
+                      // 原理：linear-gradient(方向, 上方顏色 位置, 下方顏色 位置)
+                      // transparent 代表圖片變透明 (顯示卡片的白底)，black 代表顯示圖片本體
+                      maskImage: 'linear-gradient(to bottom, transparent 0%, black 80%)',
+                      // 為了相容性，加上 Webkit 前綴
+                      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 80%)',
+                      }}
+                  />
+
+                  {/* 3. 內容區域：確保 z-index 比圖片高，文字才看得到 */}
+                  <div style={{ position: 'relative', zIndex: 1 }}>
                     <h3 className="fw-bold h4">想要快速找屋 / 找到租客？</h3>
                     <p className="text-muted">歡迎使用 「安心窩」 APP</p>
-                    <div className="d-flex gap-2 mb-4">
-                      <img src="app-store-badge.png" alt="App Store" style={{ height: "40px" }} />
-                      <img src="google-play-badge.png" alt="Google Play" style={{ height: "40px" }} />
+                    <div className="d-flex align-items-center gap-3 mb-4">
+                      <div style={{ height: "56px" }}>
+                        <img 
+                          src={googlePlayDownload} 
+                          alt="Google Play" 
+                          style={{ height: "100%", width: "auto", objectFit: "contain" ,cursor:"pointer"}} 
+                        />
+                      </div>
+                      {/* App Store 容器 */}
+                      <div style={{ height: "40px" }}>
+                        <img 
+                          src={appleStoreDownload} 
+                          alt="App Store" 
+                          style={{ height: "100%", width: "auto", objectFit: "contain" ,cursor:"pointer"}} 
+                        />
+                      </div>
+                      
                     </div>
                   </div>
-                  {/* 底部插圖 */}
-                  <div className="illustration-area text-center">
-                    {/* 這裡放置手拿手機與房子的插圖 */}
-                    <img src="your-illustration.png" className="img-fluid" alt="illustration" />
-                  </div>
+
                 </div>
               </div>
 
@@ -441,9 +488,64 @@ function App() {
         </div>
 
         {/*footer*/}
-        <div>
+        <footer className="footer mt-5">
+          <div className="container">
+            <div className="row">
+              
+              {/* 左側：品牌資訊與聯繫方式 */}
+              <div className="col-lg-5 mb-5 mb-lg-0">
+                <div className="footer-logo">
+                  {/* 這裡可以使用你的安心窩 Logo */}
+                  <i className="bi bi-house-heart"></i>
+                  <span>安心窩</span>
+                </div>
+                
+                <div className="contact-info">
+                  <p className="fw-bold mb-4">直營店(總部-雙北營業區)</p>
+                  <p><i className="bi bi-telephone-fill"></i> 0800-092-000</p>
+                  <p><i className="bi bi-envelope-fill"></i> anixinwo@gmail.com</p>
+                  <p><i className="bi bi-clock-fill"></i> 09:00~18:00(週一至週五)</p>
+                </div>
 
-        </div>
+                <div className="social-icons">
+                  <i className="bi bi-facebook"></i>
+                  <i className="bi bi-line"></i>
+                  <i className="bi bi-instagram"></i>
+                </div>
+              </div>
+
+              {/* 右側：導覽連結 */}
+              <div className="col-lg-7 footer-nav">
+                <div className="row">
+                  
+                  <div className="col-12 nav-section">
+                    <h5>合作夥伴</h5>
+                    <div className="nav-links">
+                      <span>永慶房屋</span><span>中信房屋</span><span>北揚房屋</span>
+                      <span>Zuyou租寓</span><span>怡居房屋</span>
+                    </div>
+                  </div>
+
+                  <div className="col-12 nav-section">
+                    <h5>安心窩服務</h5>
+                    <div className="nav-links">
+                      <span>智能ai服務器</span><span>安心窩慈善基金會</span><span>安心窩居家服務</span>
+                    </div>
+                  </div>
+
+                  <div className="col-12 nav-section">
+                    <h5>人才招募</h5>
+                    <div className="nav-links">
+                      <span>房仲招募</span><span>數位人才招募</span><span>經紀人員招募</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </footer>
 
     </div>
       
