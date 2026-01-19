@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jobanana57334-netizen/Project-for-ain-xin-house/static/css/main.28af500f.css",
-    "main.js": "/jobanana57334-netizen/Project-for-ain-xin-house/static/js/main.b041a935.js",
-    "static/js/453.da0e6090.chunk.js": "/jobanana57334-netizen/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js",
-    "index.html": "/jobanana57334-netizen/Project-for-ain-xin-house/index.html",
-    "main.28af500f.css.map": "/jobanana57334-netizen/Project-for-ain-xin-house/static/css/main.28af500f.css.map",
-    "main.b041a935.js.map": "/jobanana57334-netizen/Project-for-ain-xin-house/static/js/main.b041a935.js.map",
-    "453.da0e6090.chunk.js.map": "/jobanana57334-netizen/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js.map"
+    "main.css": "/Project-for-ain-xin-house/static/css/main.28af500f.css",
+    "main.js": "/Project-for-ain-xin-house/static/js/main.4192ab6e.js",
+    "static/js/453.da0e6090.chunk.js": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js",
+    "index.html": "/Project-for-ain-xin-house/index.html",
+    "main.28af500f.css.map": "/Project-for-ain-xin-house/static/css/main.28af500f.css.map",
+    "main.4192ab6e.js.map": "/Project-for-ain-xin-house/static/js/main.4192ab6e.js.map",
+    "453.da0e6090.chunk.js.map": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28af500f.css",
-    "static/js/main.b041a935.js"
+    "static/js/main.4192ab6e.js"
   ]
 }
