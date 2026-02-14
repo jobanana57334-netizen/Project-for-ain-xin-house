@@ -1,0 +1,88 @@
+{
+  "adDatas":[
+        {
+            "id":1,
+            "title":"安心找到好房東，也為好租客把關",
+            "text":"了解安心租賃流程",
+            "img":"/homePagePicture/AD/adPicture1.png"
+        },
+        {
+            "id":2,
+            "title":"把關每一次租屋，安心從人開始",
+            "text":"開始安心配對",
+            "img":"/homePagePicture/AD/adPicture2.jpg"
+        },
+        {
+            "id":3,
+            "title":"加入安心窩，開啟專屬會員回饋",
+            "text":"立即加入安心窩",
+            "img":"/homePagePicture/AD/adPicture3.png"
+        }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "title": "六角大樓商宅",
+      "address": "高雄市前鎮區中華五路 789 號 9 樓之 3",
+      "typeId": "t1", 
+      "age": 12,
+      "size": 20.85,
+      "price": 22000,
+      "img": "/homePagePicture/Houses/house_liujiao.jpg",
+      "isfavor": true,
+      "isHot":true
+    },
+    {
+      "id": 2,
+      "title": "卡斯柏辦公大樓",
+      "address": "高雄市苓雅區五福一路 226 號 12 樓",
+      "typeId": "t2",
+      "age": 25,
+      "size": 100.15,
+      "price": 100000,
+      "img": "/homePagePicture/Houses/house_casper.jpg",
+      "isfavor": false,
+      "isHot":true
+    },
+    {
+      "id": 3,
+      "title": "聯強住宅大樓",
+      "address": "台北市大安區復興南路一段 178 號 5 樓之 2",
+      "typeId": "t3",
+      "age": 20,
+      "size": 30.2,
+      "price": 40000,
+      "img": "/homePagePicture/Houses/house_lianqiang.jpg",
+      "isfavor": false,
+      "isHot":true
+    },
+    {
+      "id": 4,
+      "title": "應天透天大樓",
+      "address": "台中市西屯區市政北一路 88 號 10 樓之 5",
+      "typeId": "t3",
+      "age": 35,
+      "size": 15.18,
+      "price": 20000,
+      "img": "/homePagePicture/Houses/house_yingtian.jpg",
+      "isfavor": true,
+      "isHot":true
+    }
+  ],
+  "houseTypes": [
+    { "id": "t1", "name": "住宅大樓" },
+    { "id": "t2", "name": "辦公大樓" },
+    { "id": "t3", "name": "住商大樓" }
+  ],
+  "news":[
+    {
+      "id":1,"title":"安心窩推出AI自助式服務功能,將於2026年3月開始上線!","isNew":true
+    },
+    {
+      "id":2,"title":"賀！安心窩已成功於2025年獲頒房產金牌獎!","isNew":false
+    },
+    {
+      "id":3,"title":"下載安心窩APP，獲取最新消息,不錯過任何優惠或最新屋件消息!","isNew":false
+    }
+  ]
+}

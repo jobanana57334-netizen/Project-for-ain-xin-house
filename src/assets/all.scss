@@ -6,7 +6,9 @@ $lightYellow: #fbf4e4;
 $yellow: #d4ab6a;
 
 
-
+*{
+    font-family: "Noto Sans TC";
+}
 
 .custom-toggler {
     // 1. 設定外框樣式
@@ -42,7 +44,7 @@ $yellow: #d4ab6a;
     background-color: black;
 }
 
-// 延用你之前的按鈕樣式並稍作優化
+// 延用之前的Navbar按鈕樣式並稍作優化
 .top-button {
     background-color: $lightYellow; // 假設的 $lightYellow
     border: solid 1px $yellow;  // 假設的 $yellow
@@ -53,80 +55,30 @@ $yellow: #d4ab6a;
     cursor: pointer;
 
     &:hover {
-        background-color: white;
-        border:solid 1px darken($yellow, 50%);
-        transform: translateY(-2px); // 增加一點浮動感
-    }
-}
-
-// 調整 Carousel 的指示點樣式
-.carousel-indicators {
-    button {
-        width: 10px !important;
-        height: 10px !important;
-        border-radius: 50%; // 讓長條狀變圓點
-        margin: 0 5px !important;
-        background-color: rgba(255, 255, 255, 0.6) !important;
-        border: none !important;
-
-        &.active {
-            background-color: #fff !important;
-            width: 30px !important; // 活動中的點點可以變長一點，像圖片那樣
-            border-radius: 10px;
-        }
-    }
-}
-
-// 文字陰影 (避免背景太亮看不清字)
-.carousel-caption h2 {
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/*廣告區 左右移動框的按鈕大小*/
-.carousel-control-prev,
-.carousel-control-next {
-    width: 45px;
-}
-/* 廣告區 自定義按鈕顏色與邊框 */
-.btn-outline-custom {
-    color: #c4a468;
-    border-color: #c4a468;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    
-    // 增加按鈕圓圈本身的粗度 (選用)
-    border-width: 2px; 
-
-    // 針對按鈕內部的圖示進行加粗
-    i {
-        // 數值越高箭頭越粗，建議設定在 1px ~ 1.5px 之間
-        -webkit-text-stroke: 2px currentColor; 
-        
-        // 確保字體權重也設為最粗
-        font-weight: 900 !important; 
-    }
-
-    &:hover {
-        background-color: #c4a468;
-        color: #fff;
+        background-color: lighten($yellow,20%);
+        border:solid 1px darken($yellow, 20%);
+        transform: translateY(2px); // 增加一點壓下感
+        color: black
     }
 }
 
 
-/* 確保按鈕是正圓形且圖示置中 */
-.btn-icon {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;             /* 清除預設內距以免圓形變形 */
-    font-size: 1.2rem;      /* 調整箭頭大小 */
+
+
+
+
+/*設定自訂義背景顏色*/
+
+.bg-customer{
+    background-color: $lightYellow;
 }
+
+
+// HouseCard區開始
 
 /* 統一卡片樣式 */
 .custom-card {
-    border-radius: 10px !important;
+    border-radius: 16px !important;
     overflow: hidden; /* 重要：防止內部圖片超出圓角 */
     border: none !important; /* 移除預設邊框，解決底部的怪角問題 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 加上輕微陰影更有質感 */
@@ -143,26 +95,108 @@ $yellow: #d4ab6a;
     object-fit: cover;
 }
 
-/*設定自訂義背景顏色*/
 
-.bg-customer{
-    background-color: $lightYellow;
+
+.btn-houseCard-custom{
+        // 基礎狀態：簡約的箭頭
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: solid 1px $yellow;
+    color: #D4A373; //原本的金棕色
+    font-size: 1.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; // 先設定好圓角，為了 hover 變身做準備
+    transition: 0.5s ease;
+    &:hover{
+        background-color: $yellow;
+        color: white
+    }
+    &:active {
+        transform: scale(0.95); // 讓按鈕縮小一點點，看起來像被壓下去
+        background-color: darken($yellow, 10%); // 顏色變深一點
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); // 加入內陰影增加深度感
+    }
 }
 
+// HouseCard區結束
 
-//設定選擇安心窩理由css
+// 主題選屋區開始
 
-.reason-for{
-    background-color: white;
+// 卡片基礎樣式微調
+.theme-card {
+    transition: all 0.3s ease; // 讓陰影和浮起的效果有動畫
+    border: 1px solid transparent; // 預留邊框位置，避免 hover 時跳動
+    cursor: pointer;
+    // 當滑鼠移入卡片時的效果
+    &:hover {
+        transform: translateY(-5px); // 稍微往上浮起一點點
+        box-shadow: 0 1px 0px $yellow !important; // [參考圖1] 強烈的浮起陰影
+        border-color: #f0e4d4; // 選項：可以加一個淡淡的邊框增加質感
+    }
 }
 
+/* 主題找屋的小箭頭 */
+.theme-arrow {
+  // 基礎狀態：簡約的箭頭
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: #D4A373; //原本的金棕色
+    font-size: 1.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; // 先設定好圓角，為了 hover 變身做準備
+    transition: all 0.3s ease; // 關鍵：所有變化都要有過渡動畫
+    
+    // [關鍵] 當這張卡片被 hover 時，箭頭的樣式變化
+    .theme-card:hover & {
+        background-color: #D4A373; // [參考圖2] 變成實心金棕色背景
+        color: #ffffff; // 箭頭本身變成白色
+        transform: translateX(5px); // 同時稍微往右移動，增加動態感
+        box-shadow: 0 4px 8px rgba(212, 163, 115, 0.3); // 加上一點同色系的陰影
+        
+    }
+}
+// 主題選屋區結束
+
+
+// 推薦區開始
+
+
+.custom-yt-icon{
+    color: #D4A373;
+    font-size: 1.2rem;
+    
+    /* 關鍵：強制行高為 1，避免被繼承的行高撐開 */
+    line-height: 1; 
+    
+    /* 關鍵：確保 icon 本身以 inline-flex 渲染，更利於對齊 */
+    display: inline-flex; 
+    
+    /* 視覺微調：如果覺得 icon 還是太高，可以用 translateY 往下壓 1px */
+    transform: translateY(1px);
+        
+
+
+}
+
+// 推薦區結束
 
 // 最新公告區
+
+
 
 /* 外層容器：設定背景圖與遮罩 */
 .news-app-section {
     padding: 60px 0px;
-    background-image: url('../homePagePicture/new/notice_bg.jpg'); /* 替換為你的背景圖片路徑 */
+    
     background-size: cover;
     background-position: center;
     position: relative; /* 讓內部絕對定位元素相對於此容器定位 */
@@ -221,6 +255,16 @@ $yellow: #d4ab6a;
     border-top: 2px dashed #00a0e9;
     z-index: 1;
     pointer-events: none;
+}
+
+.DownloadIcon{
+    transition: 0.3s ease-in;
+    cursor:pointer;
+    &:hover{
+        transform: translateY(2px);
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+
+    }
 }
 
 //最新公告區結束
