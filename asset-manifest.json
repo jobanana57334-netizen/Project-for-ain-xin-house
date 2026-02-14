@@ -1,20 +1,15 @@
 {
   "files": {
-    "main.css": "/Project-for-ain-xin-house/static/css/main.12c46c9a.css",
-    "main.js": "/Project-for-ain-xin-house/static/js/main.ea6139c1.js",
+    "main.css": "/Project-for-ain-xin-house/static/css/main.861fb1b1.css",
+    "main.js": "/Project-for-ain-xin-house/static/js/main.e36e5515.js",
     "static/js/453.da0e6090.chunk.js": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js",
-    "static/media/notice_bg.jpg": "/Project-for-ain-xin-house/static/media/notice_bg.4ace8f2d3f1399c7e545.jpg",
-    "static/media/廣告區圖片.png": "/Project-for-ain-xin-house/static/media/廣告區圖片.97e927cef18379989df9.png",
-    "static/media/anxinwo_app.png": "/Project-for-ain-xin-house/static/media/anxinwo_app.a51ca06ca63ec8c35192.png",
-    "static/media/apple_store_download.png": "/Project-for-ain-xin-house/static/media/apple_store_download.6db909672987b2cb7a9a.png",
-    "static/media/google_play_download.png": "/Project-for-ain-xin-house/static/media/google_play_download.0fa78118b39f1e38aaf9.png",
     "index.html": "/Project-for-ain-xin-house/index.html",
-    "main.12c46c9a.css.map": "/Project-for-ain-xin-house/static/css/main.12c46c9a.css.map",
-    "main.ea6139c1.js.map": "/Project-for-ain-xin-house/static/js/main.ea6139c1.js.map",
+    "main.861fb1b1.css.map": "/Project-for-ain-xin-house/static/css/main.861fb1b1.css.map",
+    "main.e36e5515.js.map": "/Project-for-ain-xin-house/static/js/main.e36e5515.js.map",
     "453.da0e6090.chunk.js.map": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12c46c9a.css",
-    "static/js/main.ea6139c1.js"
+    "static/css/main.861fb1b1.css",
+    "static/js/main.e36e5515.js"
   ]
 }
