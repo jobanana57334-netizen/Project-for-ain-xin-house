@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Project-for-ain-xin-house/static/css/main.861fb1b1.css",
-    "main.js": "/Project-for-ain-xin-house/static/js/main.e36e5515.js",
+    "main.js": "/Project-for-ain-xin-house/static/js/main.c8a1b9b7.js",
     "static/js/453.da0e6090.chunk.js": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js",
     "index.html": "/Project-for-ain-xin-house/index.html",
     "main.861fb1b1.css.map": "/Project-for-ain-xin-house/static/css/main.861fb1b1.css.map",
-    "main.e36e5515.js.map": "/Project-for-ain-xin-house/static/js/main.e36e5515.js.map",
+    "main.c8a1b9b7.js.map": "/Project-for-ain-xin-house/static/js/main.c8a1b9b7.js.map",
     "453.da0e6090.chunk.js.map": "/Project-for-ain-xin-house/static/js/453.da0e6090.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.861fb1b1.css",
-    "static/js/main.e36e5515.js"
+    "static/js/main.c8a1b9b7.js"
   ]
 }
